@@ -20,4 +20,5 @@ cargo espflash flash --monitor --release -L defmt
 
 # Demo video
 
-Coming soon (have to upload through the online editor).
+https://github.com/user-attachments/assets/41152daf-c7d5-45e2-8dfa-6bb91a35e2f7
+
