@@ -7,7 +7,7 @@ use crate::{pages::HtmlPage, Result};
 
 const FORM_DATA: &str = r#"<h2>Paste input into the box and hit submit:</h2>
 <form enctype="text/plain" method="post">
-<textarea name="message" rows="40" cols="40"></textarea>
+<textarea name="message" rows="20" cols="80"></textarea>
 <input type="submit">
 </form>
 "#;
@@ -19,7 +19,7 @@ fn serve_input_page(day: u32) -> Result<HtmlPage> {
         .with_size_hint(1024);
     page.insert_header()?;
     if (1..=25).contains(&day) {
-        writeln!(page, "<h1>AOC Day {day}</h1>")?;
+        writeln!(page, "<h1>Advent of Code day {day}</h1>")?;
         page.write_str(FORM_DATA)?;
     } else {
         writeln!(page, "<h1>Unrecognised Day</h1>")?;
